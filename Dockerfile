@@ -11,8 +11,8 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY build-pytorch/torch-1.7.0a0-cp37-cp37m-linux_x86_64.whl .
 RUN pip install --force-reinstall torch-1.7.0a0-cp37-cp37m-linux_x86_64.whl
 
-COPY build-cupy/cupy-8.4.0-cp37-cp37m-linux_x86_64.whl .
-RUN pip install --force-reinstall cupy-8.4.0-cp37-cp37m-linux_x86_64.whl
+COPY build-cupy/cupy-9.1.0-cp37-cp37m-linux_x86_64.whl .
+RUN pip install --force-reinstall cupy-9.1.0-cp37-cp37m-linux_x86_64.whl
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt --no-deps

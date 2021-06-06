@@ -19,8 +19,8 @@ ENV PATH /opt/conda/bin:$PATH
 # Remove nccl, etc. need cufft, cublas, curand, cusolver
 RUN apt-get remove -y libnccl-dev libnccl2 libnpp-11-0 --allow-change-held-packages
 
-# Need v8.4.0
-RUN git clone -b 'v8.4.0' --single-branch --depth 1 https://github.com/cupy/cupy.git
+# Need v9.1.0
+RUN git clone -b 'v9.1.0' --single-branch --depth 1 https://github.com/cupy/cupy.git
 
 WORKDIR /cupy
 
